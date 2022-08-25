@@ -7,6 +7,6 @@ class CurrencyRepositoryImpl @Inject constructor(
     private val currencyRemoteDataSource: CurrencyRemoteDataSource
 ) : CurrencyRepository {
 
-    override suspend fun getRates(base: String) = currencyRemoteDataSource.getRates(base)
+    override suspend fun getRates(symbols : String, base: String) = currencyRemoteDataSource.getRates(symbols, base)
 
 }

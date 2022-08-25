@@ -9,7 +9,7 @@ class CurrencyRemoteDataSource @Inject constructor(
     private val currencyService: CurrencyService
 ) : BaseDataSource(){
 
-    suspend fun getRates(base: String) = getResult {
-        currencyService.getRates(base)
+    suspend fun getRates(symbols : String, base: String) = getResult {
+        currencyService.getRates(symbols, base)
     }
 }
